@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Bienvenido a Jefree!</title>
+    <style>
+        /* Estilos base */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', Arial, sans-serif;
+            background-color: #F3F4F6;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Contenedor principal */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #FFFFFF;
+        }
+        
+        /* Encabezado */
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            background: linear-gradient(135deg, #7E22CE, #4338CA);
+            border-radius: 16px;
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        
+        /* Contenido */
+        .content {
+            padding: 0 30px;
+            color: #1F2937;
+            line-height: 1.6;
+        }
+        
+        h1 {
+            color: #7E22CE;
+            font-size: 28px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        /* Botón */
+        .button {
+            display: inline-block;
+            padding: 16px 32px;
+            background-color: #7E22CE;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .button:hover {
+            background-color: #6B21A8;
+        }
+        
+        /* Características */
+        .features {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #F9FAFB;
+            border-radius: 12px;
+        }
+        
+        .feature-item {
+            margin-bottom: 16px;
+            padding-left: 24px;
+            position: relative;
+        }
+        
+        .feature-item::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #7E22CE;
+            font-weight: bold;
+        }
+        
+        /* Footer */
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #E5E7EB;
+            text-align: center;
+            color: #6B7280;
+            font-size: 14px;
+        }
+        
+        .social-links {
+            margin: 20px 0;
+        }
+        
+        .social-link {
+            display: inline-block;
+            margin: 0 10px;
+            color: #7E22CE;
+            text-decoration: none;
+        }
+        
+        /* Responsive */
+        @media only screen and (max-width: 480px) {
+            .container {
+                padding: 20px 10px;
+            }
+            
+            .content {
+                padding: 0 15px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .button {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="{{logoUrl}}" alt="Jefree Logo" class="logo">
+        </div>
+        
+        <div class="content">
+            <h1>¡Bienvenido a Jefree, {{name}}!</h1>
+            
+            <p>Nos alegra mucho tenerte con nosotros. Has dado el primer paso hacia una organización más inteligente de tus menús y compras.</p>
+            
+            <p>Con Jefree, podrás:</p>
+            
+            <div class="features">
+                <div class="feature-item">Generar menús personalizados según tus preferencias</div>
+                <div class="feature-item">Crear listas de compra inteligentes</div>
+                <div class="feature-item">Ahorrar tiempo en la planificación semanal</div>
+                <div class="feature-item">Mantener una alimentación variada y saludable</div>
+            </div>
+            
+            <p>Para comenzar, accede a tu cuenta y configura tus preferencias:</p>
+            
+            <div style="text-align: center;">
+                <a href="{{loginUrl}}" class="button">Acceder a mi cuenta</a>
+            </div>
+            
+            <p>Si tienes alguna pregunta o necesitas ayuda, no dudes en contactarnos en <a href="mailto:{{supportEmail}}" style="color: #7E22CE;">{{supportEmail}}</a>.</p>
+            
+            <div class="footer">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/jefreeapp/" class="social-link">Instagram</a>
+                    <a href="https://www.linkedin.com/company/jefree" class="social-link">LinkedIn</a>
+                </div>
+                
+                <p>© {{year}} Jefree. Todos los derechos reservados.</p>
+                <p style="font-size: 12px;">
+                    Has recibido este correo porque te has registrado en Jefree.<br>
+                    Si no has sido tú, por favor ignora este mensaje.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
